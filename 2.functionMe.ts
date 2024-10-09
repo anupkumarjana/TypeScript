@@ -74,13 +74,29 @@ const getHello = (s: string): string => {
   return "Hello";
 };
 
-// --------------------------------------------------------------------
+// ------------------------------interate through array (Map)--------------------------------------
 
-const heros = ["thor", "hulk", "loki"]
+const heros = ["thor", "hulk", "loki"];
 
-heros.map((hero):string=>{
-    return hero
-})
+heros.map((hero): string => {
+  return hero;
+});
 
+// ----------------------------------use of void------------------------------------
+
+// if a function doesn't return anything, we give it void, so the return type in this case is void
+
+function consoleError(err: string): void {
+  console.log(err);
+}
+
+// ----------------------------------use of never------------------------------------
+
+// The never type represents values which are never observed. in return type it means that
+// the function throws an exception or terminates execution of the program.
+
+function handleError(err: string): never {
+  throw new Error(err);
+}
 
 export {};
