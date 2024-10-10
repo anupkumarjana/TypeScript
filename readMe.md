@@ -13,7 +13,7 @@ let greeting: string = "Hi, this is Anup";
 let myAge: number = 26;
 let isDeveloper: boolean = true;
 
-let userId = 568644;   // TypeScript infers the type
+let userId = 568644; // TypeScript infers the type
 let userName = "Anup Kumar Jana";
 let userIsAdmin = true;
 
@@ -56,7 +56,12 @@ getUpperCase("happy, happy, happy");
 ### c. **Multiple Parameters**
 
 ```ts
-function signUpUser(name: string, email: string, password: string, isPaid: boolean) {
+function signUpUser(
+  name: string,
+  email: string,
+  password: string,
+  isPaid: boolean
+) {
   console.log(name, email, password, isPaid);
 }
 signUpUser("Anup", "anup@gmail.com", "123456", true);
@@ -65,10 +70,15 @@ signUpUser("Anup", "anup@gmail.com", "123456", true);
 ### d. **Arrow Function with Default Value**
 
 ```ts
-let loginUser = (name: string, email: string, password: string, isPaid: boolean = false) => {
+let loginUser = (
+  name: string,
+  email: string,
+  password: string,
+  isPaid: boolean = false
+) => {
   console.log(name, email, password, isPaid);
 };
-loginUser("Anup", "anup@gmail.com", "51654");  // Default `isPaid` is false
+loginUser("Anup", "anup@gmail.com", "51654"); // Default `isPaid` is false
 ```
 
 ---
@@ -162,7 +172,22 @@ createUserA(user);
 ## 8. Type Aliases
 
 Type aliases allow you to define custom types. Example:
+Type is a keyword in TypeScript
+so User is a type
 
 ```ts
+type User = {
+  name: string;
+  email: string;
+  isActive: boolean;
+};
+
+function createUser2(user: User): User {
+  return user;
+}
+
+createUser2({ name: "anup", email: "dj", isActive: false });
+
+
 export {};
 ```

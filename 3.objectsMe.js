@@ -20,3 +20,16 @@ function createUserA(_a) {
 }
 var user = { name: "Anup", isPaid: true };
 createUserA(user);
+function createUser2(user) {
+    return user;
+}
+createUser2({ name: "anup", email: "dj", isActive: false });
+var myUser = {
+    _id: "123",
+    name: "anup",
+    email: "anup@gmail.com",
+    isActive: false,
+};
+myUser.email = "jana@gmail.com";
+// myUser._id = "456"; // this will be complaining, because its readonly, we can't chnage its value
+console.log(myUser._id);
